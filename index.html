@@ -196,17 +196,106 @@ footer em{color:var(--c);font-style:normal}
 .reveal.show{opacity:1;transform:none}
 .corn{position:absolute}.ctl{top:0;left:0;border-top:2px solid var(--c);border-left:2px solid var(--c);width:18px;height:18px}
 .cbr{bottom:0;right:0;border-bottom:2px solid var(--c);border-right:2px solid var(--c);width:18px;height:18px}
-@media(max-width:900px){
-  nav{padding:0 1rem}.nav-links{display:none}
-  #hero{padding:0 1.5rem}
+
+/* ── TABLET (≤1024px) ──────────────────────────────── */
+@media(max-width:1024px){
+  #hero{padding:0 3rem}
+  .wrap{padding:4rem 3rem}
+  .hero-name{font-size:clamp(2.2rem,5vw,3.8rem)}
+  .hero-photo{width:260px}
+  .photo-frame{width:240px;height:360px}
+  .hero-ghost{font-size:clamp(5rem,12vw,10rem)}
+  .sh-title{font-size:clamp(1.6rem,3.5vw,2.2rem)}
+  .pgrid{grid-template-columns:repeat(2,1fr)}
+  .cgrid{grid-template-columns:repeat(2,1fr)}
+  .skills-wrap{grid-template-columns:1fr 1fr}
+  .egrid{grid-template-columns:1fr 1fr}
+  .cgr{grid-template-columns:1fr 1fr;gap:2rem}
+  .stat-row{gap:0}
+  .sn{font-size:1.2rem}
+}
+
+/* ── MOBILE LANDSCAPE / SMALL TABLET (≤768px) ─────── */
+@media(max-width:768px){
+  nav{padding:0 1rem}
+  .nav-links{display:none}
+  .nav-id{font-size:.65rem}
+  #hero{padding:5rem 1.5rem 2rem;min-height:auto}
   .hero-ghost{display:none}
-  .hero-inner{flex-direction:column-reverse;padding-top:80px;gap:1.5rem}
-  .hero-photo{width:200px}.photo-frame{width:180px;height:240px}
-  .wrap{padding:3.5rem 1.5rem}
-  .skills-wrap,.egrid,.cgr{grid-template-columns:1fr}
-  .pgrid{grid-template-columns:1fr}
-  .cgrid{grid-template-columns:1fr 1fr}
-  .scroll-hint{left:1.5rem}
+  .hero-inner{flex-direction:column-reverse;gap:1.5rem;align-items:center}
+  .hero-content{max-width:100%;text-align:center}
+  .hero-pre{justify-content:center}
+  .hero-pre::before{display:none}
+  .hero-bio{max-width:100%}
+  .hero-btns{justify-content:center}
+  .hero-name{font-size:clamp(2.4rem,8vw,3.2rem)}
+  .hero-role{font-size:.85rem}
+  .hero-photo{width:180px;align-self:center}
+  .photo-frame{width:170px;height:230px}
+  .stat-row{flex-wrap:wrap}
+  .stat-item{flex:1 1 45%;border-bottom:1px solid rgba(0,229,204,0.1)}
+  .stat-item:nth-child(2){border-right:none}
+  .stat-item:nth-child(3){border-bottom:none}
+  .stat-item:last-child{border-bottom:none}
+  .wrap{padding:3rem 1.25rem}
+  .sh{flex-wrap:wrap;gap:1rem;margin-bottom:2rem}
+  .sh-line{display:none}
+  .sh-num{writing-mode:horizontal-tb;transform:none;font-size:.6rem}
+  .sh-title{font-size:clamp(1.5rem,5vw,2rem)}
+  .skills-wrap{grid-template-columns:1fr;gap:1.25rem}
+  .pgrid{grid-template-columns:1fr;gap:1rem}
+  .egrid{grid-template-columns:1fr;gap:1rem}
+  .cgrid{grid-template-columns:1fr 1fr;gap:.75rem}
+  .cgr{grid-template-columns:1fr;gap:2rem}
+  .exp-top{flex-direction:column;gap:.4rem}
+  .exp-card{padding:1.25rem}
+  .scroll-hint{left:1.5rem;bottom:1rem}
+  .pills{grid-template-columns:repeat(2,1fr)}
+  #float-avatar{right:10px;bottom:10px}
+  #av-svg{width:72px;height:108px}
+  .av-bubble{font-size:9px;padding:5px 8px;bottom:116px}
+}
+
+/* ── MOBILE PORTRAIT (≤480px) ─────────────────────── */
+@media(max-width:480px){
+  nav{padding:0 .75rem}
+  .nav-id{font-size:.6rem}
+  #hero{padding:4.5rem 1rem 2rem}
+  .hero-name{font-size:clamp(2rem,9vw,2.8rem)}
+  .hero-photo{width:150px}
+  .photo-frame{width:145px;height:200px}
+  .photo-label{font-size:.48rem}
+  .stat-row{flex-direction:column}
+  .stat-item{flex:1 1 100%;border-right:none !important;border-bottom:1px solid rgba(0,229,204,0.08)}
+  .stat-item:last-child{border-bottom:none}
+  .sn{font-size:1.5rem}
+  .wrap{padding:2.5rem 1rem}
+  .sh-title{font-size:1.4rem}
+  .cgrid{grid-template-columns:1fr;gap:.75rem}
+  .exp-card{padding:1rem}
+  .exp-role{font-size:.85rem}
+  .pname{font-size:.95rem}
+  .hero-btns{flex-direction:column;align-items:center}
+  .btn{width:100%;justify-content:center;text-align:center}
+  .pills{grid-template-columns:1fr 1fr}
+  .jlpt{padding:1rem}
+  .jp{font-size:1.1rem}
+  .ccards{gap:.5rem}
+  .cca{padding:.9rem}
+  .socrow{gap:.4rem}
+  .sob{font-size:.58rem;padding:.45rem .7rem}
+  #float-avatar{right:8px;bottom:8px}
+  #av-svg{width:62px;height:92px}
+  .av-bubble{display:none}
+  .ticker-outer{display:none}
+}
+
+/* ── LARGE DESKTOP (≥1400px) ──────────────────────── */
+@media(min-width:1400px){
+  .wrap{max-width:1260px}
+  .hero-content{max-width:720px}
+  .hero-photo{width:380px}
+  .photo-frame{width:360px;height:500px}
 }
 </style>
 </head>
@@ -216,7 +305,7 @@ footer em{color:var(--c);font-style:normal}
 
 <nav>
   <div class="nav-id"><em>// </em>SS<em>_v2.0</em></div>
-  <ul class="nav-links">
+  <ul class="nav-links" id="nav-links">
     <li><a href="#experience">Experience</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
@@ -224,8 +313,26 @@ footer em{color:var(--c);font-style:normal}
     <li><a href="#certifications">Certs</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <div class="nav-right"><div class="pulse"></div>ONLINE</div>
+  <div style="display:flex;align-items:center;gap:.75rem">
+    <div class="nav-right"><div class="pulse"></div>ONLINE</div>
+    <button id="ham-btn" aria-label="Menu" style="display:none;background:none;border:1px solid rgba(0,229,204,0.3);color:var(--c);cursor:pointer;padding:.35rem .55rem;font-family:var(--mono);font-size:.75rem;letter-spacing:.05em">&#9776;</button>
+  </div>
 </nav>
+<!-- Mobile menu drawer -->
+<div id="mob-menu" style="display:none;position:fixed;top:56px;left:0;right:0;z-index:999;background:rgba(5,10,13,0.97);backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,229,204,0.15);padding:1rem 1.5rem;flex-direction:column;gap:0">
+  <a href="#experience" class="mob-link">Experience</a>
+  <a href="#skills" class="mob-link">Skills</a>
+  <a href="#projects" class="mob-link">Projects</a>
+  <a href="#education" class="mob-link">Education</a>
+  <a href="#certifications" class="mob-link">Certs</a>
+  <a href="#contact" class="mob-link">Contact</a>
+</div>
+<style>
+.mob-link{display:block;font-family:var(--mono);font-size:.78rem;color:var(--td);text-decoration:none;padding:.8rem 0;border-bottom:1px solid rgba(0,229,204,0.07);letter-spacing:.1em;transition:color .2s}
+.mob-link:last-child{border-bottom:none}
+.mob-link:hover{color:var(--c)}
+@media(max-width:768px){#ham-btn{display:block !important}}
+</style>
 
 <section id="hero">
   <div class="hero-ghost" id="ghost">SIVASURYAN</div>
@@ -239,12 +346,12 @@ footer em{color:var(--c);font-style:normal}
       <div class="stat-item"><div class="sn">3+</div><div class="sl">INTERNSHIPS</div></div>
       <div class="stat-item"><div class="sn">9+</div><div class="sl">CERTIFICATIONS</div></div>
       <div class="stat-item"><div class="sn">4+</div><div class="sl">PROJECTS</div></div>
-      <div class="stat-item"><div class="sn">65%</div><div class="sl">JLPT N5</div></div>
+      <div class="stat-item"><div class="sn">65%</div><div class="sl">JLPT N4</div></div>
     </div>
     <div class="hero-btns">
       <a href="#projects" class="btn btn-p">VIEW PROJECTS &#8594;</a>
       <a href="mailto:SivaSuryan.net@gmail.com" class="btn btn-s">&#10003; CONTACT</a>
-      <a href="#" class="btn btn-g">&#8595; RESUME</a>
+      <a href="https://drive.google.com/file/d/1ys1lQa7YpfWZqHOZPtkIEn-VEONSjbcK/view?usp=sharing" target="_blank" class="btn btn-g">&#8595; RESUME</a>
     </div>
   </div>
   <div class="hero-photo reveal" style="transition-delay:.3s">
@@ -299,35 +406,80 @@ footer em{color:var(--c);font-style:normal}
 <section id="skills">
   <div class="wrap">
     <div class="sh reveal"><div class="sh-num">02 // SKILLS</div><div><div class="sh-tag">TECH ARSENAL</div><h2 class="sh-title">Skill <span>Matrix</span></h2></div><div class="sh-line"></div></div>
-    <div class="skills-wrap">
+
+    <!-- ROW 1: Languages + Frameworks -->
+    <div class="skills-wrap" style="margin-bottom:1.5rem">
       <div class="sterm reveal">
-        <div class="sth"><span class="td" style="background:#ff5f57"></span><span class="td" style="background:#febc2e"></span><span class="td" style="background:#28c840"></span><span class="stt">skill_matrix.py --mode=display</span></div>
+        <div class="sth"><span class="td" style="background:#ff5f57"></span><span class="td" style="background:#febc2e"></span><span class="td" style="background:#28c840"></span><span class="stt">languages.py</span></div>
         <div class="stb">
+          <div style="font-family:var(--mono);font-size:.58rem;color:var(--td);letter-spacing:.12em;margin-bottom:1rem">// LANGUAGES</div>
           <div class="skr"><div class="skt"><span class="skn">Python</span><span class="skp">80%</span></div><div class="skbar"><div class="skf c" style="width:80%"></div></div></div>
-          <div class="skr"><div class="skt"><span class="skn">Cybersecurity</span><span class="skp">75%</span></div><div class="skbar"><div class="skf r" style="width:75%"></div></div></div>
-          <div class="skr"><div class="skt"><span class="skn">C++</span><span class="skp">65%</span></div><div class="skbar"><div class="skf c" style="width:65%"></div></div></div>
-          <div class="skr"><div class="skt"><span class="skn">Linux / Kali</span><span class="skp">70%</span></div><div class="skbar"><div class="skf r" style="width:70%"></div></div></div>
-          <div class="skr"><div class="skt"><span class="skn">React / Node.js</span><span class="skp">65%</span></div><div class="skbar"><div class="skf c" style="width:65%"></div></div></div>
-          <div class="skr"><div class="skt"><span class="skn">Unreal Engine</span><span class="skp">60%</span></div><div class="skbar"><div class="skf y" style="width:60%"></div></div></div>
-          <div class="skr"><div class="skt"><span class="skn">Blender 3D</span><span class="skp">60%</span></div><div class="skbar"><div class="skf y" style="width:60%"></div></div></div>
-          <div class="skr"><div class="skt"><span class="skn">MySQL</span><span class="skp">65%</span></div><div class="skbar"><div class="skf c" style="width:65%"></div></div></div>
-          <div class="skr"><div class="skt"><span class="skn">Problem Solving</span><span class="skp">EXPERT</span></div><div class="skbar"><div class="skf c" style="width:92%"></div></div></div>
+          <div class="skr"><div class="skt"><span class="skn">JavaScript</span><span class="skp">75%</span></div><div class="skbar"><div class="skf c" style="width:75%"></div></div></div>
+          <div class="skr"><div class="skt"><span class="skn">TypeScript</span><span class="skp">65%</span></div><div class="skbar"><div class="skf c" style="width:65%"></div></div></div>
+          <div class="skr"><div class="skt"><span class="skn">HTML / CSS</span><span class="skp">85%</span></div><div class="skbar"><div class="skf c" style="width:85%"></div></div></div>
+          <div style="font-family:var(--mono);font-size:.58rem;color:var(--td);letter-spacing:.12em;margin:1rem 0 .75rem">// FRAMEWORKS &amp; TECH</div>
+          <div class="skr"><div class="skt"><span class="skn">Node.js (Express, Fastify)</span><span class="skp">70%</span></div><div class="skbar"><div class="skf c" style="width:70%"></div></div></div>
+          <div class="skr"><div class="skt"><span class="skn">REST APIs</span><span class="skp">75%</span></div><div class="skbar"><div class="skf c" style="width:75%"></div></div></div>
+          <div class="skr"><div class="skt"><span class="skn">Linux</span><span class="skp">70%</span></div><div class="skbar"><div class="skf r" style="width:70%"></div></div></div>
         </div>
       </div>
-      <div class="sterm reveal" style="transition-delay:.15s">
-        <div class="sth"><span class="td" style="background:#ff5f57"></span><span class="td" style="background:#febc2e"></span><span class="td" style="background:#28c840"></span><span class="stt">domains.sh</span></div>
-        <div class="pills">
-          <div class="pill"><div class="pill-i">&#128737;&#65039;</div><div class="pill-n">Pen Testing</div><div class="pill-c">SECURITY</div></div>
-          <div class="pill"><div class="pill-i">&#128013;</div><div class="pill-n">Python</div><div class="pill-c">PROGRAMMING</div></div>
-          <div class="pill"><div class="pill-i">&#127918;</div><div class="pill-n">Unreal Engine</div><div class="pill-c">GAME DEV</div></div>
-          <div class="pill"><div class="pill-i">&#127912;</div><div class="pill-n">Blender 3D</div><div class="pill-c">DESIGN</div></div>
-          <div class="pill"><div class="pill-i">&#127758;</div><div class="pill-n">Full Stack</div><div class="pill-c">WEB DEV</div></div>
-          <div class="pill"><div class="pill-i">&#129302;</div><div class="pill-n">AI / ML</div><div class="pill-c">AI&amp;DS</div></div>
-          <div class="pill"><div class="pill-i">&#128269;</div><div class="pill-n">OSINT</div><div class="pill-c">RECON</div></div>
-          <div class="pill"><div class="pill-i">&#127471;&#127477;</div><div class="pill-n">Japanese</div><div class="pill-c">LANGUAGE</div></div>
+      <div class="sterm reveal" style="transition-delay:.1s">
+        <div class="sth"><span class="td" style="background:#ff5f57"></span><span class="td" style="background:#febc2e"></span><span class="td" style="background:#28c840"></span><span class="stt">cybersec_tools.sh</span></div>
+        <div class="stb">
+          <div style="font-family:var(--mono);font-size:.58rem;color:var(--td);letter-spacing:.12em;margin-bottom:1rem">// CYBERSECURITY</div>
+          <div class="skr"><div class="skt"><span class="skn">SIEM</span><span class="skp">65%</span></div><div class="skbar"><div class="skf r" style="width:65%"></div></div></div>
+          <div class="skr"><div class="skt"><span class="skn">EDR</span><span class="skp">60%</span></div><div class="skbar"><div class="skf r" style="width:60%"></div></div></div>
+          <div class="skr"><div class="skt"><span class="skn">Pen Testing</span><span class="skp">70%</span></div><div class="skbar"><div class="skf r" style="width:70%"></div></div></div>
+          <div style="font-family:var(--mono);font-size:.58rem;color:var(--td);letter-spacing:.12em;margin:1rem 0 .75rem">// VERSION CONTROL &amp; AI TOOLS</div>
+          <div class="skr"><div class="skt"><span class="skn">Git / GitHub</span><span class="skp">75%</span></div><div class="skbar"><div class="skf c" style="width:75%"></div></div></div>
+          <div class="skr"><div class="skt"><span class="skn">GitHub Copilot</span><span class="skp">80%</span></div><div class="skbar"><div class="skf y" style="width:80%"></div></div></div>
+          <div class="skr"><div class="skt"><span class="skn">Amazon Q / OpenAI Codex</span><span class="skp">70%</span></div><div class="skbar"><div class="skf y" style="width:70%"></div></div></div>
         </div>
       </div>
     </div>
+
+    <!-- ROW 2: Dev Tools grid -->
+    <div class="sterm reveal" style="transition-delay:.15s">
+      <div class="sth"><span class="td" style="background:#ff5f57"></span><span class="td" style="background:#febc2e"></span><span class="td" style="background:#28c840"></span><span class="stt">dev_tools.sh --list-all</span></div>
+      <div style="padding:1.25rem">
+        <div style="font-family:var(--mono);font-size:.58rem;color:var(--td);letter-spacing:.12em;margin-bottom:1rem">// DEVELOPER TOOLS</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:.65rem">
+          <div class="pill" style="display:flex;align-items:center;gap:.5rem;text-align:left;padding:.7rem .9rem">
+            <span style="font-size:1rem">&#128187;</span>
+            <div><div class="pill-n" style="text-align:left">VS Code</div><div class="pill-c">IDE</div></div>
+          </div>
+          <div class="pill" style="display:flex;align-items:center;gap:.5rem;text-align:left;padding:.7rem .9rem">
+            <span style="font-size:1rem">&#128241;</span>
+            <div><div class="pill-n" style="text-align:left">Android Studio</div><div class="pill-c">MOBILE</div></div>
+          </div>
+          <div class="pill" style="display:flex;align-items:center;gap:.5rem;text-align:left;padding:.7rem .9rem">
+            <span style="font-size:1rem">&#128229;</span>
+            <div><div class="pill-n" style="text-align:left">Docker</div><div class="pill-c">CONTAINERS</div></div>
+          </div>
+          <div class="pill" style="display:flex;align-items:center;gap:.5rem;text-align:left;padding:.7rem .9rem">
+            <span style="font-size:1rem">&#128760;</span>
+            <div><div class="pill-n" style="text-align:left">VMware</div><div class="pill-c">VIRTUALISATION</div></div>
+          </div>
+          <div class="pill" style="display:flex;align-items:center;gap:.5rem;text-align:left;padding:.7rem .9rem">
+            <span style="font-size:1rem">&#128272;</span>
+            <div><div class="pill-n" style="text-align:left">PuTTY</div><div class="pill-c">SSH</div></div>
+          </div>
+          <div class="pill" style="display:flex;align-items:center;gap:.5rem;text-align:left;padding:.7rem .9rem">
+            <span style="font-size:1rem">&#128200;</span>
+            <div><div class="pill-n" style="text-align:left">MongoDB Compass</div><div class="pill-c">DATABASE</div></div>
+          </div>
+          <div class="pill" style="display:flex;align-items:center;gap:.5rem;text-align:left;padding:.7rem .9rem">
+            <span style="font-size:1rem">&#127912;</span>
+            <div><div class="pill-n" style="text-align:left">Blender</div><div class="pill-c">3D DESIGN</div></div>
+          </div>
+          <div class="pill" style="display:flex;align-items:center;gap:.5rem;text-align:left;padding:.7rem .9rem">
+            <span style="font-size:1rem">&#127775;</span>
+            <div><div class="pill-n" style="text-align:left">Canva</div><div class="pill-c">DESIGN</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -339,25 +491,25 @@ footer em{color:var(--c);font-style:normal}
         <div class="phd"><div class="pid">PRJ-001 // AI + GAME DEV</div><div class="pname">AI NPC Arcade</div></div>
         <div class="pbd"><div class="pdesc">Built an AI-powered NPC system with dynamic interactions and intelligent responses using the Gemini API. NPCs adapt behaviour in real-time, creating emergent gameplay experiences in a pygame environment.</div>
         <div class="tags"><span class="tag cy">Python</span><span class="tag cy">pygame</span><span class="tag cy">Gemini API</span><span class="tag">AI / NLP</span></div></div>
-        <div class="plnks"><a href="https://github.com/sivasuryan-s" target="_blank" class="plnk">&#60;/&#62; GitHub <span class="ar">&#8594;</span></a></div>
+        <div class="plnks"><a href="https://github.com/Sivasuryan-net" target="_blank" class="plnk">&#60;/&#62; GitHub <span class="ar">&#8594;</span></a></div>
       </div>
       <div class="pcard reveal" style="transition-delay:.1s" onmousemove="pg(this,event)"><div class="pglow"></div>
         <div class="phd"><div class="pid">PRJ-002 // CYBERSECURITY</div><div class="pname">Cybee &#8212; AI Threat Detector</div></div>
         <div class="pbd"><div class="pdesc">AI-based network threat detection system using graph analysis. Leverages NetworkX and graph theory to map network relationships and flag anomalous activity patterns in real-time traffic.</div>
         <div class="tags"><span class="tag rd">Python</span><span class="tag rd">NetworkX</span><span class="tag rd">Graph Theory</span><span class="tag rd">AI Threat Detection</span></div></div>
-        <div class="plnks"><a href="https://github.com/sivasuryan-s" target="_blank" class="plnk">&#60;/&#62; GitHub <span class="ar">&#8594;</span></a></div>
+        <div class="plnks"><a href="https://github.com/Sivasuryan-net" target="_blank" class="plnk">&#60;/&#62; GitHub <span class="ar">&#8594;</span></a></div>
       </div>
       <div class="pcard reveal" style="transition-delay:.15s" onmousemove="pg(this,event)"><div class="pglow"></div>
         <div class="phd"><div class="pid">PRJ-003 // BACKEND</div><div class="pname">Farely Backend</div></div>
         <div class="pbd"><div class="pdesc">Designed and built scalable backend services with RESTful APIs using Node.js and Express. Architected for performance with proper routing, middleware, and database integration.</div>
         <div class="tags"><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">REST API</span><span class="tag cy">Backend</span></div></div>
-        <div class="plnks"><a href="https://github.com/sivasuryan-s" target="_blank" class="plnk">&#60;/&#62; GitHub <span class="ar">&#8594;</span></a></div>
+        <div class="plnks"><a href="https://github.com/Sivasuryan-net" target="_blank" class="plnk">&#60;/&#62; GitHub <span class="ar">&#8594;</span></a></div>
       </div>
       <div class="pcard reveal" style="transition-delay:.2s" onmousemove="pg(this,event)"><div class="pglow"></div>
         <div class="phd"><div class="pid">PRJ-004 // AI + HEALTHCARE</div><div class="pname">Cataract Detection CNN</div></div>
         <div class="pbd"><div class="pdesc">CNN model for automated cataract detection from eye images. Trained on annotated medical image datasets achieving high classification accuracy, demonstrating applied AI in healthcare diagnostics.</div>
         <div class="tags"><span class="tag cy">Python</span><span class="tag cy">Machine Learning</span><span class="tag cy">CNN</span><span class="tag">Healthcare AI</span></div></div>
-        <div class="plnks"><a href="https://github.com/sivasuryan-s" target="_blank" class="plnk">&#60;/&#62; GitHub <span class="ar">&#8594;</span></a></div>
+        <div class="plnks"><a href="https://github.com/Sivasuryan-net" target="_blank" class="plnk">&#60;/&#62; GitHub <span class="ar">&#8594;</span></a></div>
       </div>
     </div>
   </div>
@@ -382,7 +534,7 @@ footer em{color:var(--c);font-style:normal}
         <div style="margin-top:1.1rem;border:1px solid rgba(255,45,85,.14);background:rgba(255,45,85,.025);padding:1.25rem">
           <div style="font-family:var(--mono);font-size:.58rem;color:var(--c3);letter-spacing:.15em;margin-bottom:.65rem">// TRYHACKME ACTIVE</div>
           <p style="font-size:.8rem;color:var(--td);line-height:1.7;font-weight:300">Practicing CTF challenges, SOC analyst paths, and hands-on penetration testing labs regularly on TryHackMe.</p>
-          <a href="https://tryhackme.com" target="_blank" style="display:inline-flex;align-items:center;gap:.35rem;font-family:var(--mono);font-size:.62rem;color:var(--c3);text-decoration:none;margin-top:.7rem">View Profile &#8594;</a>
+          <a href="https://tryhackme.com/p/sivasuryan.net" target="_blank" style="display:inline-flex;align-items:center;gap:.35rem;font-family:var(--mono);font-size:.62rem;color:var(--c3);text-decoration:none;margin-top:.7rem">View Profile &#8594;</a>
         </div>
       </div>
     </div>
@@ -414,10 +566,10 @@ footer em{color:var(--c);font-style:normal}
         <h3>Let's Build Something.</h3>
         <p>Looking for internship opportunities, collaborative projects, or want to talk cybersecurity, game dev, or Japan tech? Always open to connecting with like-minded people and organizations.</p>
         <div class="socrow">
-          <a href="https://github.com/sivasuryan-s" target="_blank" class="sob">&#60;/&#62; GitHub</a>
-          <a href="https://linkedin.com/in/sivasuryan-s" target="_blank" class="sob">&#128279; LinkedIn</a>
-          <a href="https://tryhackme.com" target="_blank" class="sob">&#128308; TryHackMe</a>
-          <a href="#" class="sob">&#8595; Resume</a>
+          <a href="https://github.com/Sivasuryan-net" target="_blank" class="sob">&#60;/&#62; GitHub</a>
+          <a href="https://www.linkedin.com/in/s-siva-suryan/" target="_blank" class="sob">&#128279; LinkedIn</a>
+          <a href="https://tryhackme.com/p/sivasuryan.net" target="_blank" class="sob">&#128308; TryHackMe</a>
+          <a href="https://drive.google.com/file/d/1ys1lQa7YpfWZqHOZPtkIEn-VEONSjbcK/view?usp=sharing" target="_blank" class="sob">&#8595; Resume</a>
         </div>
         <div class="ticker-outer">
           <div class="ticker-h">// LIVE ACTIVITY FEED</div>
@@ -442,10 +594,10 @@ footer em{color:var(--c);font-style:normal}
       <div class="ccards reveal" style="transition-delay:.15s">
         <a href="mailto:SivaSuryan.net@gmail.com" class="cca"><span class="cai">&#128231;</span><div><div class="cak">Email</div><div class="cav">SivaSuryan.net@gmail.com</div></div><span class="caar">&#8594;</span></a>
         <a href="tel:+917358892676" class="cca"><span class="cai">&#128241;</span><div><div class="cak">Phone</div><div class="cav">+91 73588 92676</div></div><span class="caar">&#8594;</span></a>
-        <a href="https://github.com/sivasuryan-s" target="_blank" class="cca"><span class="cai">&#128187;</span><div><div class="cak">GitHub</div><div class="cav">github.com/sivasuryan-s</div></div><span class="caar">&#8594;</span></a>
-        <a href="https://linkedin.com/in/sivasuryan-s" target="_blank" class="cca"><span class="cai">&#128279;</span><div><div class="cak">LinkedIn</div><div class="cav">linkedin.com/in/sivasuryan-s</div></div><span class="caar">&#8594;</span></a>
-        <a href="https://tryhackme.com" target="_blank" class="cca"><span class="cai">&#128308;</span><div><div class="cak">TryHackMe</div><div class="cav">Active — CTF &amp; SOC Labs</div></div><span class="caar">&#8594;</span></a>
-        <a href="#" class="cca"><span class="cai">&#128196;</span><div><div class="cak">Resume</div><div class="cav">Download CV / Resume PDF</div></div><span class="caar">&#8595;</span></a>
+        <a href="https://github.com/Sivasuryan-net" target="_blank" class="cca"><span class="cai">&#128187;</span><div><div class="cak">GitHub</div><div class="cav">github.com/Sivasuryan-net</div></div><span class="caar">&#8594;</span></a>
+        <a href="https://www.linkedin.com/in/s-siva-suryan/" target="_blank" class="cca"><span class="cai">&#128279;</span><div><div class="cak">LinkedIn</div><div class="cav">linkedin.com/in/s-siva-suryan</div></div><span class="caar">&#8594;</span></a>
+        <a href="https://tryhackme.com/p/sivasuryan.net" target="_blank" class="cca"><span class="cai">&#128308;</span><div><div class="cak">TryHackMe</div><div class="cav">Active — CTF &amp; SOC Labs</div></div><span class="caar">&#8594;</span></a>
+        <a href="https://drive.google.com/file/d/1ys1lQa7YpfWZqHOZPtkIEn-VEONSjbcK/view?usp=sharing" target="_blank" class="cca"><span class="cai">&#128196;</span><div><div class="cak">Resume</div><div class="cav">Download CV / Resume PDF</div></div><span class="caar">&#8595;</span></a>
       </div>
     </div>
   </div>
@@ -793,6 +945,28 @@ window.pg=pg;
       const baseY = 23;
       p.setAttribute('cx', baseX + mx);
       p.setAttribute('cy', baseY + my);
+    });
+  });
+})();
+</script>
+
+
+<script>
+(function(){
+  const btn = document.getElementById('ham-btn');
+  const menu = document.getElementById('mob-menu');
+  if(!btn||!menu) return;
+  let open = false;
+  btn.addEventListener('click', () => {
+    open = !open;
+    menu.style.display = open ? 'flex' : 'none';
+    btn.innerHTML = open ? '&#10005;' : '&#9776;';
+  });
+  menu.querySelectorAll('.mob-link').forEach(a => {
+    a.addEventListener('click', () => {
+      open = false;
+      menu.style.display = 'none';
+      btn.innerHTML = '&#9776;';
     });
   });
 })();
